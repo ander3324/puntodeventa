@@ -21,10 +21,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import net.iterart.iterartpos.model.entities.Usuario;
-
 @Entity
 @Table(name = "ventas")
 public class Venta implements Serializable {

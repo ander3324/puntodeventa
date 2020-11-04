@@ -1,0 +1,3 @@
+INSERT INTO `pos_db`.`articulos` (`cant`, `bar_cod`, `descr`, `link_img`, `precio`) VALUES ('10', '1111111111111', 'Fernet Branca', 'https://d26lpennugtm8s.cloudfront.net/stores/001/064/758/products/fernet-branca4-3dac0c35b89744f58915875589067332-1024-1024.jpg', '450');
+INSERT INTO `pos_db`.`articulos` (`cant`, `bar_cod`, `descr`, `link_img`, `precio`) VALUES ('20', '2222222222222', 'Manaos Uva', 'https://i.ytimg.com/vi/FRcTILufZcA/maxresdefault.jpg', '85');
+INSERT INTO `pos_db`.`articulos` (`cant`, `bar_cod`, `descr`, `link_img`, `precio`) VALUES ('15', '3333333333333', 'Cerveza Heineken', 'https://economiasustentable.com/wp-content/uploads/2020/01/heineken.jpg', '40');
