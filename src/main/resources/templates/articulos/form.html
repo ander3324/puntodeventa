@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html
+	lang="es"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+
+	<h2 th:text="${titulo}"></h2>
+
+	<form th:action="@{/articulos/form}" method="post" th:object="${articulo}">
+		<fieldset>
+			<legend>Completar los campos: </legend>
+
+			<label for="descripcion">Descripción</label>
+			<input
+				type="text"
+				id="descripcion"
+				th:field="*{descripcion}"
+				th:errorclass="'form-control alert-danger'" />
+			<small
+				class="form-text text-danger"
+				th:if="${#fields.hasErrors('descripcion')}"
+				th:errors="*{descripcion}"></small>
+			<br>
+			<label for="codBarras">Cód.Barras</label>
+			<input
+				type="text"
+				maxlength="13"
+				id="codBarras"
+				th:field="*{codBarras}"
+				th:errorclass="'form-control alert-danger'" />
+			<small
+				class="form-text text-danger"
+				th:if="${#fields.hasErrors('codBarras')}"
+				th:errors="*{codBarras}"></small>
+			<br>
+			<label for="cantidad">Stock</label>
+			<input
+				type="number"
+				id="cantidad"
+				min="0"
+				th:field="*{cantidad}"
+				th:errorclass="'form-control alert-danger'" />
+			<small
+				class="form-text text-danger"
+				th:if="${#fields.hasErrors('cantidad')}"
+				th:errors="*{cantidad}"></small>
+			<br>
+			<label for="precio">Precio</label>
+			<input
+				type="text"
+				id="precio"
+				th:field="*{precio}"
+				th:errorclass="'form-control alert-danger'" />
+			<small
+				class="form-text text-danger"
+				th:if="${#fields.hasErrors('precio')}"
+				th:errors="*{precio}"></small>
+			<br>
+			<label for="linkImagen">Url de la Imagen</label>
+			<input
+				type="url"
+				id="linkImagen"
+				th:field="*{linkImagen}"
+				th:errorclass="'form-control alert-danger'" />
+			<small
+				class="form-text text-danger"
+				th:if="${#fields.hasErrors('linkImagen')}"
+				th:errors="*{linkImagen}"></small>
+		</fieldset>
+		
+		<input type="submit" value="Guardar" />
+		<input type="button" value="Cancelar" onclick="location.href='/articulos/list'" />
+		
+	</form>
+
+
+
+</body>
+</html>

@@ -14,11 +14,11 @@ public class ArticuloServiceImpl implements IArticuloService {
 
 	@Autowired
 	IArticuloRepository articuloRepo;
-	
+
 	@Override
 	@Transactional(readOnly = true)
 	public List<Articulo> buscarTodo() {
-		
+
 		return articuloRepo.findAll();
 	}
 
@@ -30,20 +30,17 @@ public class ArticuloServiceImpl implements IArticuloService {
 
 	@Override
 	public Articulo buscarPorId(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return articuloRepo.findById(id).orElse(null);
 	}
 
 	@Override
 	public void guardar(Articulo articulo) {
-		// TODO Auto-generated method stub
-
+		articuloRepo.save(articulo);
 	}
 
 	@Override
 	public void borrar(Integer id) {
-		// TODO Auto-generated method stub
-
+		articuloRepo.deleteById(id);
 	}
 
 }

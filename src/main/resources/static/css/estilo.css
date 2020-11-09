@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+
+.msj-borrar {
+	color: red;
+	border-style: solid;
+	border-color: red;
+	padding: 1.0rem;
+	margin: 1.0rem;
+	width: 200px;
+	text-align: center;
+}
+
+.msj-guardar {
+	color: green;
+	border-style: solid;
+	border-color: green;
+	padding: 1.0rem;
+	margin: 1.0rem;
+	width: 200px;
+	text-align: center;
+}
+
+.msj-editar {
+	color: orange;
+	border-style: solid;
+	border-color: orange;
+	padding: 1.0rem;
+	margin: 1.0rem;
+	width: 200px;
+	text-align: center;
+}
